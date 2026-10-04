@@ -1,1 +1,8 @@
+Phase 1 Journal
+The Adapter pattern helps the Principle of Least Knowledge because the main program only needs to know about the SecurityLog interface. It does not need to understand how the old LegacyFirewall works. The adapter translates the commands for us. This makes the code easier to change and keeps the dashboard from depending directly on the old firewall.
 
+Phase 2 Journal
+I had to manually remember the ports, users, and database that were changed during the emergency. With only a few items this is manageable, but with thousands of ports and users it would become very difficult. It would be easy to forget something or restore the wrong item, which could cause security problems.
+
+Phase 3 Journal
+The Facade pattern makes the Main class much simpler because it only needs to call one method instead of remembering every step. For example, liftEmergencyLockdown() handles all the actions needed to restore the system. If the network controller was replaced with another vendor, most of the changes could be handled inside the Facade. The Main class would not need to know the details as long as the Facade still provides the same commands.
